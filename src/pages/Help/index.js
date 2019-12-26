@@ -6,6 +6,7 @@ import { withNavigationFocus } from 'react-navigation';
 
 import Background from '../../components/Background';
 import Button from '../../components/Button';
+import Exit from '../../components/Exit';
 
 import { formatDistanceDateToNow } from '../../utils/format';
 import api from '../../services/api';
@@ -143,5 +144,9 @@ function Help({ navigation, isFocused }) {
 Help.propTypes = {
   isFocused: PropTypes.bool.isRequired,
 };
+
+Help.navigationOptions = props => ({
+  headerRight: <Exit {...props} />,
+});
 
 export default withNavigationFocus(Help);

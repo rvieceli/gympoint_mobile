@@ -5,6 +5,7 @@ import { ActivityIndicator } from 'react-native';
 import { withNavigationFocus } from 'react-navigation';
 
 import Background from '../../components/Background';
+import Exit from '../../components/Exit';
 
 import { Container, List, Item, Title, Time } from './styles';
 import New from './New';
@@ -122,5 +123,9 @@ function CheckIn({ isFocused }) {
 CheckIn.propTypes = {
   isFocused: PropTypes.bool.isRequired,
 };
+
+CheckIn.navigationOptions = props => ({
+  headerRight: <Exit {...props} />,
+});
 
 export default withNavigationFocus(CheckIn);
