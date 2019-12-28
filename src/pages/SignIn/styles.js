@@ -31,16 +31,35 @@ export const Input = styled.TextInput.attrs({
 
   border-radius: 4px;
   border: 1px solid #ddd;
-`;
 
-export const ErrorMessage = styled.Text`
-  color: #ee4e62;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 5px;
-  align-self: center;
+  font-size: ${props => (props.value ? 20 : 16)};
+  color: #444;
+  font-weight: ${props => (props.value ? 'bold' : 'normal')};
+  text-align: center;
 `;
 
 export const SubmitButton = styled(Button)`
   margin-top: 15px;
+`;
+
+export const Strong = styled.Text`
+  font-weight: bold;
+`;
+
+export const Name = styled.Text`
+  color: #ee4e62;
+  font-size: 15px;
+  margin-bottom: 10px;
+  align-self: center;
+`;
+
+export const LinkButton = styled.TouchableOpacity`
+  margin-top: 20px;
+`;
+
+export const LinkText = styled.Text`
+  color: #ee4e62;
+  font-size: 16px;
+  font-weight: bold;
+  align-self: center;
 `;
