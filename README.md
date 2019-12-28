@@ -16,10 +16,11 @@ $ cd gympoint_mobile
 $ yarn
 
 # Create .env based on .env.example
-# open android or ios emulator
+# open android emulator
 
 # Run application
 $ npx react-native run-android
-$ npx react-native run-ios
 
 ```
+
+_App desenvolvimento em ambiente Windows, não testado no iOS_
